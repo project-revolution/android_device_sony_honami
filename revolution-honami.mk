@@ -14,9 +14,14 @@
 # limitations under the License.
 #
 
-LOCAL_PATH := $(call my-dir)
-include $(CLEAR_VARS)
+# Inherit device configuration
+$(call inherit-product, device/sony/honami/full_honami.mk)
 
-ifeq ($(TARGET_PREBUILT_KERNEL),)
-TARGET_PREBUILT_KERNEL := device/sony/honami/kernel
-endif
+## Device identifier. This must come after all inclusions
+PRODUCT_NAME := revolution_honami
+PRODUCT_DEVICE := honami
+PRODUCT_BRAND := sony
+PRODUCT_MODEL := Xperia Z1
+PRODUCT_MANUFACTURER := sony
+
+PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=C6903 BUILD_FINGERPRINT=Sony/C6903_1276-7948/C6903:4.2.2/14.1.G.1.526/8Xl-jw:user/release-keys PRIVATE_BUILD_DESC="C6903-user 4.2.2 14.1.G.1.526 8Xl-jw test-keys"
