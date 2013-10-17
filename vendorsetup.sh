@@ -1,1 +1,1 @@
-add_lunch_combo revolution_honami-eng
+add_lunch_combo aosp_honami-eng
