@@ -23,7 +23,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/sony/common/resources-xxhdpi.mk)
 
 # Inherit from honami device
-$(call inherit-product, device/sony/honami/honami.mk)
+$(call inherit-product, device/sony/honami/device.mk)
 
 # Set those variables here to overwrite the inherited values.
 PRODUCT_NAME := full_honami
